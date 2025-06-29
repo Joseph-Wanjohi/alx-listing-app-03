@@ -18,22 +18,25 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Logo */}
         <div className="flex items-center mb-4 md:mb-0">
-          <Link href="/">
-            <a className="flex items-center">
-              <Image src="/logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto mr-2" />
-              <Image src="/logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto mr-2" />
-              <span className="text-xl font-bold text-gray-800">YourBrand</span>
-            </a>
+          <Link href="/" className="flex items-center">
+
+            <Image src="/logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto mr-2" />
+            <Image src="/logo.png" alt="Logo" width={32} height={32} className="h-8 w-auto mr-2" />
+            <span className="text-xl font-bold text-gray-800">YourBrand</span>
+
           </Link>
         </div>
 
         {/* Accommodation Types */}
         <nav className="flex flex-wrap justify-center mb-4 md:mb-0">
           {accommodationTypes.map((type) => (
-            <Link key={type} href={`/accommodations/${type.toLowerCase()}`}>
-              <a className="mx-2 text-gray-700 hover:text-gray-900 text-sm font-medium">
-                {type}
-              </a>
+            <Link
+              key={type}
+              href={`/accommodations/${type.toLowerCase()}`}
+              className="mx-2 text-gray-700 hover:text-gray-900 text-sm font-medium">
+
+              {type}
+
             </Link>
           ))}
         </nav>
@@ -53,15 +56,17 @@ const Header: React.FC = () => {
           </div>
 
           {/* Sign In */}
-          <Link href="/signin">
-            <a className="text-sm text-gray-700 hover:text-gray-900">Sign In</a>
+          <Link href="/signin" className="text-sm text-gray-700 hover:text-gray-900">
+            Sign In
           </Link>
 
           {/* Sign Up */}
-          <Link href="/signup">
-            <a className="text-sm bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
+          <Link
+            href="/signup"
+            className="text-sm bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-200">
+            
               Sign Up
-            </a>
+            
           </Link>
         </div>
       </div>
